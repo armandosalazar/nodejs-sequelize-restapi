@@ -5,6 +5,7 @@ import {
   updateProject,
   deleteProject,
   getProject,
+  getProjectTasks,
 } from '../controllers/products.controller';
 
 export default Router()
@@ -12,4 +13,5 @@ export default Router()
   .post('/projects', createProject)
   .put('/projects/:id', updateProject)
   .delete('/projects/:id', deleteProject)
-  .get('/projects/:id', getProject);
+  .get('/projects/:id', getProject)
+  .get('/projects/:id/tasks', getProjectTasks);
